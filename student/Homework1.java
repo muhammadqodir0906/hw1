@@ -3,7 +3,26 @@ package student;
 public class Homework1 {
 
     public double shippingCalculator(int n){
-        //TODO Write your code here for problem 1
+       public static double calculateShippingCost(int n) {
+        if (n <= 0) {
+            return 0;
+        } else if (n == 1) {
+            return 10.95;
+        } else {
+            return 10.95 + (n - 1) * 2.95;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of items purchased: ");
+        int n = scanner.nextInt();
+
+        double shippingCost = calculateShippingCost(n);
+
+        System.out.println("Shipping cost: $" + shippingCost);
+    }
         return 0;
     }
     public boolean isValidTriangle(int a, int b, int c){
